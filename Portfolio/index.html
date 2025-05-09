@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("NIKOPoeDW3PqCplS3");
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm a student at USAI Academy. I know basics of C++, HTML5, CSS, and JavaScript. I'm starting my journey in web development!</p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>C++</li>
+      <li>HTML5</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me through the form below or follow my social media:</p>
+    <div class="social-links">
+      <a href="https://tiktok.com/@yourusername" target="_blank">TikTok</a>
+      <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+      <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+    </div>
+    <p>Phone: +48 535 054 732</p>
+    <p>Email: vasya.shymkiv@gmail.com</p>
+
+    <form id="contact-form" class="contact-form">
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="from_email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vasyl Shymkiv</p>
+  </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.send("service_kuqohld", "template_toe3hhf", {
+        from_name: this.from_name.value,
+        from_email: this.from_email.value,
+        message: this.message.value,
+      }).then(function () {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function (error) {
+        console.error("Failed to send message:", error);
+        alert("Failed to send message. Please try again later.");
+      });
+    });
+  </script>
+</body>
+</html>

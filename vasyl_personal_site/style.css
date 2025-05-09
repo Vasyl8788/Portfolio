@@ -1,0 +1,234 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: transform 0.3s, font-size 0.3s;
+}
+
+nav a:hover {
+    color: #e1ff00; /* Можеш змінити на свій колір */
+    font-size: 22px;  /* Текст стає більшим */
+    transform: scale(1.1); /* Трохи збільшується */
+}
+
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.skills-icons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    font-size: 48px;
+    margin-top: 20px;
+}
+
+.icon-tooltip {
+    position: relative;
+    display: inline-block;
+    color: #333;
+    cursor: pointer;
+}
+
+.icon-tooltip i {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.icon-tooltip:hover i {
+    transform: scale(1.2);
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.icon-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+  
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #0091f8; /* Можеш змінити на свій колір */
+    font-size: 22px;  /* Текст стає більшим */
+    transform: scale(1.1); /* Трохи збільшується */
+
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #eee;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 10px;
+  }
+  nav a {
+    display: block;
+    margin: 5px 0;
+    border: 1px solid red;
+  }
+}
+
+
+
+
+/* Світла тема (за замовчуванням) */
+body.light-theme {
+    background-color: #fff;
+    color: #333;
+}
+
+nav {
+    background-color: #333;
+    color: #333;
+}
+
+nav a {
+    color: #fbfbfb;
+}
+
+button.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Темна тема */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+nav.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+nav.dark-theme a {
+    color: #fff;
+}
+
+body.light-theme .icon-tooltip i {
+    color: #222;
+}
+
+/* Кольори в темній темі */
+body.dark-theme .icon-tooltip i {
+    color: #f4f4f4;
+}
+
+/* Світла тема — колір при наведенні */
+body.light-theme .icon-tooltip:hover i {
+    color: #007bff; /* синій, або обери інший */
+}
+
+/* Темна тема — колір при наведенні */
+body.dark-theme .icon-tooltip:hover i {
+    color: #007bff; /* блакитний, або будь-який інший контрастний */
+}
+
+
+.skills-icons.dark-theme {
+  color: #f5f5f5;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    font-size: 48px;
+    margin-top: 20px;
+}
+
+/* Плавний перехід */
+body, nav {
+    transition: background-color 0.3s, color 0.3s;
+}

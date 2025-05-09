@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Калькулятор Калорій</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-background"></div>
+
+  <div class="background">
+    <h1 class="h1">Калькулятор Калорій</h1>
+
+    <label for="product">Назва продукту:</label>
+    <input type="text" id="product" placeholder="Наприклад, яблуко" />
+
+    <label for="weight">Вага (грамів):</label>
+    <input type="number" id="weight" placeholder="100" />
+    
+    <label for="language">Оберіть мову:</label>
+    <select id="language">
+    <option value="uk">Українська</option>
+    <option value="en">English</option>
+    </select>
+
+    <button onclick="searchProducts()">Пошук</button>
+
+    <div id="suggestions"></div>
+    <div class="result" id="result"></div>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
